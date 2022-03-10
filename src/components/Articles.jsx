@@ -1,6 +1,7 @@
 import { getArticles } from "./api";
 import ArticleCard from "./ArticleCards";
 import {useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Articles() {
     const [articles, setArticles] = useState([])
@@ -22,6 +23,7 @@ export default function Articles() {
             comment_count,
             }) => {
             return (
+                <Link to={`/articles/${article_id}`}>
                 <ArticleCard
                 key={article_id}
                 article_id={article_id}
@@ -31,7 +33,7 @@ export default function Articles() {
                 votes={votes}
                 created_at={created_at}
                 comment_count={comment_count}
-                />
+                /></Link>
                 )
             },
          )}

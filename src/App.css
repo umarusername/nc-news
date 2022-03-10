@@ -32,6 +32,10 @@
   padding: 10px;
 }
 
+a:link {
+  text-decoration: none; /* no underline */
+}
+
 .AllArticles {
   /* width: 50%; */
   margin-left: 5%;
@@ -47,6 +51,7 @@
 }
 
 .ArticleCards {
+  color: black;
   display: flexbox;
   padding: 10px;
   border-style: solid;
