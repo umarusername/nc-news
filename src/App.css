@@ -36,20 +36,6 @@ a:link {
   text-decoration: none; /* no underline */
 }
 
-.AllArticles {
-  /* width: 50%; */
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 10%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px; /* just changed this one from 10 px*/
-  border-style: solid;
-  border-radius: 20px;
-  border-color: rgb(14, 152, 173);
-  padding: 10px;
-}
-
 .ArticleCards {
   color: black;
   display: flexbox;
