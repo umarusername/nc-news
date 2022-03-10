@@ -1,9 +1,13 @@
 import Articles from "./Articles"
+import ArticlesByTopic from "./ArticlesByTopic"
 
-export default function Home({setArticles}) {
+//line 8 - used to be <Articles setArticles={setArticles} /> but was superceded
+//by ArticlesByTopic(Following the DRY coding method) 
+//also the setState wasn't even doing anything. 
+export default function Home() {
     return (
         <section>
-            <Articles setArticles={setArticles} />
+            <ArticlesByTopic />
         </section>
     )
 }
