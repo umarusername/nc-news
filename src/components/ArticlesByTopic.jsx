@@ -1,17 +1,20 @@
-import { getArticles } from "./api";
-import ArticleCard from "./ArticleCards";
-import {useEffect, useState } from "react";
+import { useParams } from "react-router-dom"
+import {useState, setState, useEffect } from "react" 
+import { getArticles } from "./api"
+import ArticleCard from "./ArticleCards"
 
-export default function Articles() {
-    const [articles, setArticles] = useState([])
+export default function ArticlesByTopic () {
+    const {topic} = useParams()
+    const [articlesByTopic, setArticlesByTopic] = useState([])
     useEffect(()=> {
-        getArticles().then((articleData) => {
-            setArticles(articleData)
+        getArticles(topic).then((articleData) => {
+            setArticlesByTopic(articleData)
         })
-    }, [])
+    }, [topic])
+
     return (
-        <article className="AllArticles">
-            {articles.map(
+            <section className="ArticlesByTopic">
+            {articlesByTopic.map(
             ({
             article_id,
             title,
@@ -35,6 +38,6 @@ export default function Articles() {
                 )
             },
          )}
-        </article>
-    )
-}
+            </section>
+        )
+    }

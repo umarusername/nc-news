@@ -2,15 +2,10 @@
   text-align: center;
 }
 
-.navbar {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .Title {
+  margin-left: 5%;
+  margin-right: 5%;
   color: rgb(14, 152, 173);
-  text-align: left;
   border-style: solid;
   border-radius: 20px;
   border-color: rgb(14, 152, 173);
@@ -18,11 +13,33 @@
   padding: 20px;
 }
 
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ArticlesByTopic {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: rgb(14, 152, 173);
+  padding: 10px;
+}
+
 .AllArticles {
   /* width: 50%; */
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 10%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px; /* just changed this one from 10 px*/
   border-style: solid;
   border-radius: 20px;
   border-color: rgb(14, 152, 173);
