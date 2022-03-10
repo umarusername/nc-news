@@ -15,3 +15,10 @@ export const getTopics = () => {
     return res.data.topics;
   });
 };
+
+export const getArticlesByID = (id) => {
+  return axios.get(`${baseURL}/articles/${id}`).then(({ data }) => {
+    console.log("FROM API==>", data.article);
+    return data.article;
+  });
+};

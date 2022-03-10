@@ -9,7 +9,7 @@ export default function Topics() {
             setTopics(topicData)
         })
     }, [])
-    console.log(topics)
+    // console.log(topics)
     return (
         <>
         {topics.map((topic)=>{
