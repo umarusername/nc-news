@@ -12,7 +12,7 @@ export default function IndividualArticle () {
         setisLoading(true)
         setErr(null)
         getArticlesByID(id).then((article)=>{
-            console.log(article, id)
+            // console.log(article, id)
             setSingleArticle(article)
             setisLoading(false)
         }).catch((err)=>{

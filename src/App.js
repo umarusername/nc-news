@@ -9,7 +9,6 @@ import "./App.css";
 import Title from "./components/Title";
 import Home from "./components/Home";
 import NavigationBar from "./components/NavigationBar";
-import Topics from "./components/Topics";
 import ArticlesByTopic from "./components/ArticlesByTopic";
 import IndividualArticle from "./components/IndividualArticle";
 
