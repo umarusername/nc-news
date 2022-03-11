@@ -22,3 +22,10 @@ export const getArticlesByID = (id) => {
     return data.article;
   });
 };
+
+export const getComments = (id) => {
+  return axios.get(`${baseURL}/articles/${id}/comments`).then(({ data }) => {
+    // console.log("FROM API==>", data.article);
+    return data.comments;
+  });
+};
