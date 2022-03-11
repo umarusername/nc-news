@@ -59,3 +59,42 @@ a:link {
   border-color: rgb(255, 201, 54);
   text-align: left;
 }
+
+.IndividualArticle {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  grid-gap: 20px;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: rgb(14, 152, 173);
+  padding: 20px;
+}
+
+.CommentsHeader {
+  text-align: left;
+  color: rgb(14, 152, 173);
+  padding: 1px;
+}
+
+.ArticleCommentsBox {
+  display: grid;
+  grid-gap: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  color: rgb(14, 152, 173);
+  border-radius: 15px;
+  border-style: solid;
+  padding: 20px;
+}
+
+.IndividualComments {
+  color: black;
+  display: flexbox;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: rgb(255, 201, 54);
+  text-align: left;
+}

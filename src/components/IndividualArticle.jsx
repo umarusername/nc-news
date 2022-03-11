@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticlesByID } from "./api";
 import ArticleCard from "./ArticleCards";
+import ArticleComments from "./ArticleComments";
 
 export default function IndividualArticle () {
     const [singleArticle, setSingleArticle] = useState({})
@@ -12,7 +13,7 @@ export default function IndividualArticle () {
         setisLoading(true)
         setErr(null)
         getArticlesByID(id).then((article)=>{
-            // console.log(article, id)
+            //console.log(article, id)
             setSingleArticle(article)
             setisLoading(false)
         }).catch((err)=>{
@@ -26,7 +27,7 @@ export default function IndividualArticle () {
     return (
         <>
         <h2>here</h2>
-        <section>
+        <section className="IndividualArticle">
         <ArticleCard 
                   key={id}
                   article_id={id}
@@ -38,6 +39,9 @@ export default function IndividualArticle () {
                   created_at={singleArticle.created_at}
                   comment_count={singleArticle.comment_count}/>
         </section>
+            <>
+            <ArticleComments />
+            </>
         </>
-    )
+    ) //Around the bottom here i want to render the comments jsx.
 }

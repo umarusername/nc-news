@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import NavigationBar from "./components/NavigationBar";
 import ArticlesByTopic from "./components/ArticlesByTopic";
 import IndividualArticle from "./components/IndividualArticle";
+import ArticleComments from "./components/ArticleComments";
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
           <Route path={"/"} element={<Home />} />
           <Route path="/topics/:topic" element={<ArticlesByTopic />} />
           <Route path={"/articles/:id"} element={<IndividualArticle />} />
+          <Route
+            path={"/articles/:id/:comments"}
+            element={<ArticleComments />}
+          />
         </Routes>
       </div>
     </BrowserRouter>
